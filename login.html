@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-      .container {
-        display: flex;
-        justify-content: center;
-      }
-      .box {
-        /* background-color: silver; */
-        padding: 10px;
-        width: 250px;
-      }
-      .box p {
-        background-color: white;
-        border: 1px solid gray;
-      }
-      input {
-        border: none;
-      }
+    <script>
+        function f1(){
+            let username=document.getElementById("email").value 
+            let pass=document.getElementById("password").value 
+            data.innerHTML=`${username}, ${pass}`
 
-      button {
-        width: 100%;
-        background-color: blue;
-        color: white;
-        border-radius: 20px;
-        padding: 10px;
-        border: none;
-      }
-      .loginOption {
-        border: 1px gray solid;
-        border-radius: 20px;
-        padding: 7px;
-        margin-top: 20px;
-        text-align: center;
-        color: grey;
-      }
-      a {
-        text-decoration: none;
-      }
+        }
+    </script>
+        <style>
+        .container{
+            
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+
+        }
+        .box{
+            border: 2px solid silver;
+            padding: 20px;
+            width: 350px;
+            border-radius: 10px;
+            height: 380px;
+
+        }
+        input{
+            width: 90%;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button{
+            font-size: large;
+            border-radius: 6px;
+            width: 50%;
+            background-color: blue ;
+            padding: 10px;
+            color: white;
+            
+        }
     </style>
-  </head>
-  <body>
     
+</head>
+<body>
     <div class="container">
-      <div class="box">
-        <h2>Sign in</h2>
-        <div class="loginOption">Continue with Google</div>
-        <div class="loginOption">Continue with Apple</div>
-        <div>
-          <p>
-            Email or Phone<br />
-            <input type="text" />
-          </p>
-        </div>
-        <div>
-          <p>
-            Password<br />
-            <input type="password" />
-          </p>
-        </div>
-        <div>
-          <a href="#">Forgot Password?</a>
-        </div><br>
-        <div>
-            <input type="checkbox">Keep me signed in
-        </div><br>
-        <button>Sign in</button>
-      </div>
-    </div>
-  </body>
+        <div class="box">
+    <h1>Login Form</h1>
+    <p><input type="text" id="email" placeholder="Email Address"></p>
+    <p><input type="password" id="password" placeholder="Password"></p>
+    <p><a href="#">forgot password?</a></p>
+    <button onclick="f1()">Login </button>
+    <hr>
+    <button onclick="window.location.href='register.html';" style="background-color: green; color: white;" >Create an account</button>
+    
+
+
+    <div id="data"></div>
+</div>
+</div>
+</body>
 </html>
